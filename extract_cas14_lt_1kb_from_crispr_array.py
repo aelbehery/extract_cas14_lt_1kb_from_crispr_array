@@ -34,7 +34,7 @@ for contig in contigs:
             diff = [int(x[0]) - int(protein[1]) for x in dr]
         else:
             diff = [int(protein[0]) - int(x[1]) for x in dr]
-        positions = [index for index, element in enumerate(diff) if 0 < element <= 5000]
+        positions = [index for index, element in enumerate(diff) if 0 < element <= 1000]
         if len(positions) == 1:
             position = positions[0]
             correct_cas14.append([contig] + protein + dr[position] + [str(diff[position])])
